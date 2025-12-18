@@ -61,7 +61,7 @@ Sustituye `su_api_key` por la clave real que recibiste por correo.
 
 - En **Windows** (PowerShell o CMD):
 
-echo %EXCHANGERATE_APIKEY%`
+`echo %EXCHANGERATE_APIKEY%`
 
 - En **macOS / Linux** (terminal):
 
