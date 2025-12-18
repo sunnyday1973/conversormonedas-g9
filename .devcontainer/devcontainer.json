@@ -1,0 +1,37 @@
+{
+  "name": "Java Spring Boot - Conversor de Monedas",
+  "image": "mcr.microsoft.com/devcontainers/java:1-17-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "none",
+      "installMaven": "true",
+      "installGradle": "false"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-boot-devpack",
+        "redhat.java",
+        "Pivotal.vscode-boot-devpack",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-json"
+      ]
+    }
+  },
+  "forwardPorts": [8080],
+  "postCreateCommand": "mvn clean install",
+  "remoteUser": "vscode",
+  "overrideFeatureInstallOrder": [
+    "java"
+  ],
+  "containerEnv": {
+    "EXCHANGERATE_APIKEY": "${localEnv:EXCHANGERATE_APIKEY}"
+  },
+  "remoteEnv": {
+    "EXCHANGERATE_APIKEY": "${localEnv:EXCHANGERATE_APIKEY}"
+  }
+}
