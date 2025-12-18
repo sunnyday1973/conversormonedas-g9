@@ -11,7 +11,7 @@ Para su integracion, es necesario tener la clave de esa API.
 Para obtener esa clave, es necesario realizar un registro inicial ingresando un correo electrónico. 
 Después de esto, recibirás una clave en el correo electrónico proporcionado y estará lista para su uso. Accede al [enlace](https://www.exchangerate-api.com/) 
 y realiza su registro.
-Una vez, obtenida la llave, crea la variable del sistema con nombre EXCHANGERATE_APIKEY y valor obtenido de la llave.
+Una vez, obtenida la llave, crea la variable del sistema con nombre `EXCHANGERATE_APIKEY` y valor obtenido de la llave.
 
 ## Crear una variable de entorno vía interfaz de Windows
 1. Abrir el Panel de control
@@ -25,18 +25,24 @@ Una vez, obtenida la llave, crea la variable del sistema con nombre EXCHANGERATE
 
 
 ## Crear una variable vía terminal en MacOS 
-echo 'export EXCHANGERATE_APIKEY=su_api_key' >> ~/.zshrc
-source ~/.zshrc
+`echo 'export EXCHANGERATE_APIKEY=su_api_key' >> ~/.zshrc`
+
+`source ~/.zshrc`
+
+
+## Crear variable de entorno en GitHub como Codespaces Secret
+1. Ir al repositorio en GitHub
+2. Abrir Settings
+3. Ir a Secrets and variables → Codespaces
+4. Seleccionar New repository secret
+5. Definir:
+  Name: `EXCHANGERATE_APIKEY`
+  Value: `su_api_key`
 
 ## Verificar que la variable existe
-En modo de comandos o de PowerShell en Windos o terminal de MacOs escriba
-echo $EXCHANGERATE_APIKEY
+En modo de comandos o de PowerShell en *Windos* o terminal de *MacOs* escriba
+`echo $EXCHANGERATE_APIKEY`
 
 ## Ejecutar la aplicación
-Al ejecutar la aplicacion, se presentara el siguente menu:
-1 - Ver valores de las monedas
-2 - Ver valor de cambio de una moneda a otra
-3 - Calcular monto de cambio de una moneda a otra
-4 - Ver códigos de monedas
------------
-0 - Salir
+
+
